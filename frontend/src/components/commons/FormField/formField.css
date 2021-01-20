@@ -1,0 +1,58 @@
+/* #ff-radio {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: brown;
+}
+#ff-radio-label {
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: blue;
+}
+#ff-radio-radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw; */
+/* } */
+
+#ff-radio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#ff-radio > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 10vw;
+    height: 5vh;
+    
+}
+#ff-radio > input {
+    margin: 10px;  
+}
+
+#ff-radio > label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ff-button {
+    border: none;
+    background-color: transparent;
+    color: #ff4444;
+}
+
+.ff-button:hover {
+    color: #CC0000;
+}
+

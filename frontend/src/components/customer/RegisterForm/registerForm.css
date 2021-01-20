@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap');
+
+.main-register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-form {
+    width: 80vw;
+    max-width: 700px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: -10px -10px 20px #d9d9d9, 10px 10px 20px #ffffff;
+    margin-top: 1.5vh;
+}
+
+.reg_form {
+    padding: 0;
+}
+
+.register-header>h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(209, 62, 136);
+}
+
+/* Main form fields */
+
+.register-field {
+    width: 70vw;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+}
+
+.register-field>p {
+    height: 1vh;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Form labels */
+
+.register-field>p>label {
+    width: 70vw;
+    max-width: 650px;
+    height: 0.5rem;
+    font-size: 0.9rem;
+    color: #004d95;
+}
+
+/* Form inputs */
+
+.register-field>p>input {
+    width: 70vw;
+    max-width: 600px;
+    text-align: left;
+    border: none;
+    border-radius: 0;
+    border-bottom: #004d95 0.1rem solid;
+    width: 60vw;
+}
+
+/* Form submit */
+
+.register-submit {
+    margin-top: 2vh;
+    width: 60vw;
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-submit>p>input[type=submit] {
+    width: 35vw;
+    max-width: 350px;
+    height: 6vh;
+    background: rgb(209, 62, 136);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+}
+
+.register-submit>p>input[type=submit]:hover {
+    width: 35vw;
+    max-width: 350px;
+    border-radius: 10px;
+    background: #c24c86;
+    box-shadow: inset 5px 5px 10px #a54172, inset -5px -5px 10px #df579a;
+}

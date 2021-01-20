@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap');
+
+.main-edit-user .register-header h1 {
+    margin-top: 2vh;
+
+}
+
+.main-edit-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    color: #0059ab;
+}
+
+.main-edit-user input {
+    border: 0px;
+    border-bottom: #004d95 0.1rem solid;
+}
+
+.main-edit-user input[type=submit] {
+    width: 30vw;
+    max-width: 350px;
+    height: 5vh;
+    background: rgb(209, 62, 136);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    margin-top: 1vh;
+}

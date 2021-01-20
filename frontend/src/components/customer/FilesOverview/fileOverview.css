@@ -1,0 +1,16 @@
+.main-files-overview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.files-overview {
+    width: 80vw;
+    max-width: 700px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  -10px -10px 20px #d9d9d9,
+    10px 10px 20px #ffffff;
+    margin-top: 2vh;
+    padding-bottom: 2vh;
+}

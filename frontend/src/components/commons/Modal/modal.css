@@ -1,0 +1,45 @@
+.modalContainer {
+    position: fixed;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    margin: 12vh 0;
+    top: 0;
+    left: 0;
+    max-height: 76vh;
+    width: 100%;
+    /* max-width: 600px; */
+    /* top: 50%;
+    left: 50%; */
+    color: white;
+    background-color: rgb(0, 77, 149);
+    overflow-y: scroll;
+}
+
+.modalHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    /* background-color: red; */
+}
+
+.modalData {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem;
+}
+
+.modalItem {
+    display: flex;
+}
+
+.modalButton {
+    font-size: 2rem;
+    color: white;
+    background-color: transparent;
+    border: none;
+}

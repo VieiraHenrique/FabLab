@@ -1,0 +1,38 @@
+.machine-picker {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1vh;
+}
+
+.machine-picker>label {
+    width: 70vw;
+    max-width: 400px;
+    border-radius: 5px;
+    background: #004d95;
+    box-shadow: inset 5px 5px 10px #00417f, inset -5px -5px 10px #0059ab;
+    color: #fff;
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.machine-picker select {
+    padding: 5px 0px;
+    border: none;
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+    width: 70vw;
+    max-width: 400px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    color: #0059ab;
+}
+
+.machine-picker option {
+    border-radius: 10px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    color: #0059ab;
+}

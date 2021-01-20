@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap');
+.main-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-container {
+    width: 90vw;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  -10px -10px 20px #d9d9d9,
+    10px 10px 20px #ffffff;
+    padding-top: 1vh;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+}
+
+.list-title {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5vh;
+}
+
+.list-title h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+}
+
+.white-container .table td {
+    vertical-align: middle;
+}
+.banner-list {
+    background: #004d95;
+    box-shadow: inset 5px 5px 10px #00417f,
+    inset -5px -5px 10px #0059ab;
+    color: #fff;
+}
+
+.add-icon {
+    padding: 8px 10px;
+    margin-bottom: 1vh;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  -5px -5px 10px #d9d9d9,
+    5px 5px 10px #ffffff;
+    color: rgb(194, 76, 134);
+    font-size: 2rem;
+}
+.add-icon:hover {
+    border-radius: 10px;
+    background: linear-gradient(315deg, #e6e6e6, #ffffff);
+    box-shadow:  -5px -5px 10px #d9d9d9,
+    5px 5px 10px #ffffff;
+}
+
+.edit-icon {
+    padding: 9px 9px 10px 10px;
+    margin-bottom: 0.5vh;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  -5px -5px 10px #d9d9d9,
+    5px 5px 10px #ffffff;
+    color: rgb(238, 171, 69);
+    font-size: 1.2rem;
+}
+.edit-icon:hover {
+    border-radius: 10px;
+    background: linear-gradient(315deg, #e6e6e6, #ffffff);
+    box-shadow:  -5px -5px 10px #d9d9d9,
+    5px 5px 10px #ffffff;
+}
+
+.delete-icon {
+    padding: 10px 12px;
+    margin-bottom: 0.5vh;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  -5px -5px 10px #d9d9d9,
+    5px 5px 10px #ffffff;
+    color: rgb(213, 58, 39);
+    font-size: 1.2rem;
+}
+.delete-icon:hover {
+    border-radius: 10px;
+    background: linear-gradient(315deg, #e6e6e6, #ffffff);
+    box-shadow:  -5px -5px 10px #d9d9d9,
+    5px 5px 10px #ffffff;
+}

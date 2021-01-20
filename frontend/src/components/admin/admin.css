@@ -1,0 +1,70 @@
+.admin-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 13vh;
+    margin-bottom: 13vh;
+
+}
+
+.admin-main > ul {
+    height: 4vh;
+    max-height: 50px;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    padding-top: 1vh;
+    padding-left: 0;
+}
+
+.admin-main > ul > li {
+    margin: 0 2vw;
+}
+
+.nav-item {
+    height: 4vh;
+    max-height: 50px;
+}
+
+.nav-item > a {
+    border-radius: 10px;
+    background: #FFFFFF;
+    box-shadow:  5px 5px 10px #d9d9d9,
+    -5px -5px 10px #ffffff;
+    padding: 1vw;
+    font-size: 1.5rem;
+
+}
+
+.nav-item > a:hover{
+    border-radius: 10px;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow:  5px 5px 10px #d9d9d9,
+    -5px -5px 10px #ffffff;
+    color: rgb(194, 76, 134);
+}
+
+.nav-item .is-current {
+    border-radius: 10px;
+    background: #FFFFFF;
+    box-shadow: inset 5px 5px 10px #d9d9d9,
+    inset -5px -5px 10px #ffffff;
+    color: rgb(194, 76, 134);
+}
+
+form {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+form > div > label {
+  width: 12vh;
+  text-align: right;
+  padding-right: 1vh;
+}
+
