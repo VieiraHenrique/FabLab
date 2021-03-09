@@ -19,40 +19,40 @@ exports.getAllUser = async (req, res) => {
 }
 
 // Session management
-exports.getSessionUser = async (req, res, next)=>{
+exports.getSessionUser = async (req, res, next) => {
     if (req.session.user) {
-        res.send({loggedIn: true, user: req.session.user});
-    }else{
-        res.send({loggedIn: false});
+        res.send({ loggedIn: true, user: req.session.user });
+    } else {
+        res.send({ loggedIn: false });
     }
     next();
 }
 
-exports.destroySessionUser = async (req, res, next)=>{
-req.session.destroy();
-res.send({loggedIn: false});
+exports.destroySessionUser = async (req, res, next) => {
+    req.session.destroy();
+    res.send({ loggedIn: false });
     next();
 }
 
 exports.authUser = async (req, res) => {
     const email = req.params.email;
     try {
-        await User.findOne({email: email},(err, doc)=>{
-            if(err) throw err;
-            if(!doc){
+        await User.findOne({ email: email }, (err, doc) => {
+            if (err) throw err;
+            if (!doc) {
                 res.status(403).json({
                     message: 'The user is not register.'
                 });
                 console.log('The user is not register.');
-            }else{
-                bcrypt.compare(req.body.password, doc.password, function(err, result) {
-                    if(result){
-                    console.log('you are logged in as ' + doc.lastname);
-                    req.session.user = doc;
-                    res.status(200).json(
-                        {loggedIn: true,message: "Login Successfuly!" , user: req.session.user}
-                    );
-                    }else if(err){
+            } else {
+                bcrypt.compare(req.body.password, doc.password, function (err, result) {
+                    if (result) {
+                        console.log('you are logged in as ' + doc.lastname);
+                        req.session.user = doc;
+                        res.status(200).json(
+                            { loggedIn: true, message: "Login Successfuly!", user: req.session.user }
+                        );
+                    } else if (err) {
                         res.status(403).json({
                             message: 'incorrect password.'
                         });
@@ -72,15 +72,15 @@ exports.getUserByID = async (req, res) => {
     const id = req.params.id;
 
     try {
-        await User.findOne({_id: id},(err, doc)=>{
-            if(err) throw err;
-            if(!doc){
+        await User.findOne({ _id: id }, (err, doc) => {
+            if (err) throw err;
+            if (!doc) {
                 console.log('User not found');
-                res.send({message: 'User not found!'})
-            }else{
+                res.send({ message: 'User not found!' })
+            } else {
                 console.log(req.doc);
                 res.json(doc);
-            }      
+            }
         });
 
     } catch (error) {
@@ -92,15 +92,15 @@ exports.getUser = async (req, res) => {
     const email = req.params.email;
 
     try {
-        await User.findOne({email: email},(err, doc)=>{
-            if(err) throw err;
-            if(!doc){
+        await User.findOne({ email: email }, (err, doc) => {
+            if (err) throw err;
+            if (!doc) {
                 console.log('User not found');
-                res.send({message: 'User not found!'})
-            }else{
+                res.send({ message: 'User not found!' })
+            } else {
                 console.log(req.doc);
                 res.json(doc);
-            }      
+            }
         });
 
     } catch (error) {
@@ -113,10 +113,10 @@ exports.getUser = async (req, res) => {
 exports.postUser = (req, res) => {
     const { firstname, lastname, email, tel, password, company, reservation, invoice, usertype } = req.body;
     const user = new User({ firstname: firstname, lastname: lastname, email: email, tel: tel, password: password, company: company, reservation: reservation, invoice: invoice, usertype: usertype });
-    bcrypt.genSalt(saltRounds, function(err, salt) {
-        bcrypt.hash(user.password, salt, function(err, hash) {
+    bcrypt.genSalt(saltRounds, function (err, salt) {
+        bcrypt.hash(user.password, salt, function (err, hash) {
             user.password = hash;
-            
+
             try {
                 user.save();
                 // Success behaviour TBD
@@ -137,15 +137,15 @@ exports.putEditUser = (req, res) => {
     const userId = req.params.userId;
     const { firstname, lastname, email, tel, company, type } = req.body;
     User.findById(userId)
-    .then((user) => {
-        user.firstname = firstname;
-        user.lastname = lastname;
-        user.email = email;
-        user.tel = tel;
-        user.company = company;
-        user.usertype = type;
-        
-        user.save();
+        .then((user) => {
+            user.firstname = firstname;
+            user.lastname = lastname;
+            user.email = email;
+            user.tel = tel;
+            user.company = company;
+            user.usertype = type;
+
+            user.save();
         })
         .then(() => {
             console.log('User Updated');

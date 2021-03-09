@@ -167,15 +167,15 @@ exports.getUser = function _callee4(req, res) {
 
 exports.postUser = function (req, res) {
   var _req$body = req.body,
-      firstname = _req$body.firstname,
-      lastname = _req$body.lastname,
-      email = _req$body.email,
-      tel = _req$body.tel,
-      password = _req$body.password,
-      company = _req$body.company,
-      reservation = _req$body.reservation,
-      invoice = _req$body.invoice,
-      usertype = _req$body.usertype;
+    firstname = _req$body.firstname,
+    lastname = _req$body.lastname,
+    email = _req$body.email,
+    tel = _req$body.tel,
+    password = _req$body.password,
+    company = _req$body.company,
+    reservation = _req$body.reservation,
+    invoice = _req$body.invoice,
+    usertype = _req$body.usertype;
   var user = new User({
     firstname: firstname,
     lastname: lastname,
@@ -210,10 +210,10 @@ exports.postEditUser = function (req, res) {
   // TDB
   var userId = req.body.petId;
   var _req$body2 = req.body,
-      firstname = _req$body2.firstname,
-      lastname = _req$body2.lastname,
-      email = _req$body2.email,
-      company = _req$body2.company;
+    firstname = _req$body2.firstname,
+    lastname = _req$body2.lastname,
+    email = _req$body2.email,
+    company = _req$body2.company;
   User.findById(userId).then(function (user) {
     user.firstname = firstname;
     user.lastname = lastname;
