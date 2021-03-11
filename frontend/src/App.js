@@ -7,34 +7,33 @@ import './App.css';
 
 
 function App() {
-const [user, setUser] = useState({
-  loggedIn: false,
-  data: {}
-}); 
-useEffect(()=>{
-  
-  getUsersSessions('/user').then((response)=>{
-    if (response.data.loggedIn && !user.loggedIn) {
-      setUser({
-        loggedIn: true, 
-        data: response.data.user
-      });
-
-    }
-    else if(!response.data.loggedIn && user.loggedIn) {
-      setUser({
-        loggedIn: false,
-        user: {}
-      });
-    }
+  const [user, setUser] = useState({
+    loggedIn: false,
+    data: {}
   });
-},[user]);
+  useEffect(() => {
+
+    getUsersSessions('/user').then((response) => {
+      if (response.data.loggedIn && !user.loggedIn) {
+        setUser({
+          loggedIn: true,
+          data: response.data.user
+        });
+      }
+      else if (!response.data.loggedIn && user.loggedIn) {
+        setUser({
+          loggedIn: false,
+          user: {}
+        });
+      }
+    });
+  }, [user]);
 
   return (
     <Router>
-        <Header user={user} />
-        <Routes user={user} />
-        <Nav />
+      <Header user={user} />
+      <Routes user={user} />
+      <Nav />
     </Router>
   );
 }

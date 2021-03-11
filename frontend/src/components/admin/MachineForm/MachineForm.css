@@ -1,0 +1,106 @@
+h1{
+    font-size: 2.5rem;
+    color: rgb(209, 62, 136);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/*Title*/
+.login-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.display{
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #004d95;
+  margin-top: 10px;
+}
+
+/*Form*/
+.log-form > div > label {
+  text-align: left;
+  max-width: 650px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #004d95;
+}
+
+.log-form{
+  width: 70vw;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.input > text{
+  
+    border-bottom: #004d95 0.1rem solid;
+    color: red;
+}
+
+.login-form{
+  width: 80vw;
+    max-width: 700px;
+    height: 350px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: -10px -10px 20px #d9d9d9, 10px 10px 20px #ffffff;
+    margin-top: 1.5vh;
+}
+
+label {
+  text-align: left;
+  margin-right: 15px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+input[type="text"], input[type="number"]{
+    border: none;
+    border-radius: 0;
+    border-bottom: #004d95 0.1rem solid;
+}
+
+input[type="textarea"]{
+    color: red;
+}
+
+input[type="radio"]{
+  vertical-align: middle;
+}
+
+/*form submit*/
+input[type="submit"]{
+  align-items: flex-start;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgb(209, 62, 136);
+  box-shadow:  -10px -10px 20px #d9d9d9;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+  width: 15vw;
+  height: 6vh;
+  padding: 1px 6px;
+  border-width: 0px;
+  border-radius: 10px;
+  margin-top: 30px;
+
+}
+input[type="submit"]:hover{
+    width: 15vw;
+    max-width: 400px;
+    border-radius: 10px;
+    background: #c24c86;
+    box-shadow: inset 5px 5px 10px #a54172,
+    inset -5px -5px 10px #df579a;
+    font-size: 1.5rem;
+  }
